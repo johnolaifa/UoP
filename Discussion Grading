@@ -1,0 +1,21 @@
+/* ==UserStyle==
+@name           Discussion Grading
+@namespace      https://github.com/johnolaifa/UoP
+@version        1.0.0
+@description    Adjusts the width of Discussion grading panels in Moodle
+@author         john
+@match          https://my.uopeople.edu/mod/forum/view.php?*
+==/UserStyle== */
+
+@-moz-document domain("my.uopeople.edu") {
+    /* Right panel (grading details) */
+    [data-region="module_content_container"] {
+        /*margin-right: 600px !important;  /* Expand from default 450px */
+        margin-right: 600px !important; /* Your working pixel adjustment */
+    }   
+    /* Left panel (PDF annotation) */
+    [data-region="right-hand-drawer"] {
+        /*width: 600px !important;  /* Expand from default 450px */
+        width: 600px !important;
+    }
+}
