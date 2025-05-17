@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name           UoPeople Moodle - Grading Panel Resizer
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Adjusts the width of grading panels in Moodle
+@author         You
+@match          https://my.uopeople.edu/mod/assign/view.php*
+==/UserStyle== */
+
+@-moz-document domain("my.uopeople.edu") {
+    /* Right panel (grading details) */
+    [data-region="grade-panel"] {
+        width: 47.5% !important;  /* Reduce from default ~60% */
+        min-width: 300px !important;
+        left: 895.2px !important; /* Your working pixel adjustment */
+    }    
+    /* Left panel (PDF annotation) */
+    [data-region="review-panel"] {
+        width: 65% !important;  /* Expand from default ~40% */
+    }    
+    /* Ensure proper scrolling */
+    .gradingtable {
+        overflow-x: visible !important;
+    }    
+    /* Fix for PDF viewer container */
+    .drawingregion {
+        max-width: 100% !important;
+    }
+}
