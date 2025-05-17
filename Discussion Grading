@@ -8,14 +8,15 @@
 ==/UserStyle== */
 
 @-moz-document domain("my.uopeople.edu") {
+    :root {
+        --panel-width: 650px; /* Tune width here */
+    }
     /* Right panel (grading details) */
     [data-region="module_content_container"] {
-        /*margin-right: 600px !important;  /* Expand from default 450px */
-        margin-right: 600px !important; /* Your working pixel adjustment */
-    }   
+        margin-right: var(--panel-width) !important;
+    }    
     /* Left panel (PDF annotation) */
     [data-region="right-hand-drawer"] {
-        /*width: 600px !important;  /* Expand from default 450px */
-        width: 600px !important;
-    }
+        width: var(--panel-width) !important;
+    }   
 }
